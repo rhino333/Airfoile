@@ -1,0 +1,145 @@
+\hypertarget{class_cell}{}\section{Cell Class Reference}
+\label{class_cell}\index{Cell@{Cell}}
+
+
+Inheritance diagram for Cell\+:
+% FIG 0
+
+
+Collaboration diagram for Cell\+:
+% FIG 1
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cell_afda512c8ce838c9c0b384ba80e8101fa}\label{class_cell_afda512c8ce838c9c0b384ba80e8101fa}} 
+void {\bfseries set\+Child\+Nodes} (\mbox{\hyperlink{class_node}{Node}} $\ast$L, \mbox{\hyperlink{class_node}{Node}} $\ast$D, \mbox{\hyperlink{class_node}{Node}} $\ast$R, \mbox{\hyperlink{class_node}{Node}} $\ast$U, \mbox{\hyperlink{class_node}{Node}} $\ast$C, int partialtype)
+\item 
+\mbox{\Hypertarget{class_cell_aac4125f10985f2647c249c592af891a4}\label{class_cell_aac4125f10985f2647c249c592af891a4}} 
+void {\bfseries set\+New\+Faces} (\mbox{\hyperlink{class_face}{Face}} $\ast$from, \mbox{\hyperlink{class_face}{Face}} $\ast$child1, \mbox{\hyperlink{class_face}{Face}} $\ast$child2, \mbox{\hyperlink{class_node}{Node}} $\ast$Start, \mbox{\hyperlink{class_node}{Node}} $\ast$Center, \mbox{\hyperlink{class_node}{Node}} $\ast$End)
+\item 
+\mbox{\Hypertarget{class_cell_afd95216e4834d532f10047edbbd63e8e}\label{class_cell_afd95216e4834d532f10047edbbd63e8e}} 
+void {\bfseries setup\+Mininode\+Place} (double x, double y)
+\item 
+\mbox{\Hypertarget{class_cell_a02db7bacf349567561393501e2a35e7b}\label{class_cell_a02db7bacf349567561393501e2a35e7b}} 
+bool {\bfseries getiscut} ()
+\item 
+\mbox{\Hypertarget{class_cell_aea15514a83bd6fd0e9ce3d12a6fdf30e}\label{class_cell_aea15514a83bd6fd0e9ce3d12a6fdf30e}} 
+void {\bfseries setiscut} (bool cut)
+\item 
+\mbox{\Hypertarget{class_cell_a39bddc2108158fb5e4fcfc2f1d308697}\label{class_cell_a39bddc2108158fb5e4fcfc2f1d308697}} 
+int {\bfseries get\+Node\+Count} ()
+\item 
+\mbox{\Hypertarget{class_cell_a5c35f6d65094bd83f162b2585c224c97}\label{class_cell_a5c35f6d65094bd83f162b2585c224c97}} 
+int {\bfseries get\+Cell\+Count} ()
+\item 
+\mbox{\Hypertarget{class_cell_af5adedfa216d98e1ed71a068a6ec97f0}\label{class_cell_af5adedfa216d98e1ed71a068a6ec97f0}} 
+int {\bfseries get\+Face\+Count} ()
+\item 
+\mbox{\Hypertarget{class_cell_a6fb5e28360b3a6e53400af8b950f6203}\label{class_cell_a6fb5e28360b3a6e53400af8b950f6203}} 
+int {\bfseries get\+ID} ()
+\item 
+\mbox{\Hypertarget{class_cell_aa6e628adb712069b19b1b1eba0d03284}\label{class_cell_aa6e628adb712069b19b1b1eba0d03284}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries get\+L\+U\+Node} ()
+\item 
+\mbox{\Hypertarget{class_cell_a3ebe74061002e010802af6ff1bf569da}\label{class_cell_a3ebe74061002e010802af6ff1bf569da}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries get\+L\+D\+Node} ()
+\item 
+\mbox{\Hypertarget{class_cell_aa729979878905e4131442c46d62e9e0e}\label{class_cell_aa729979878905e4131442c46d62e9e0e}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries get\+R\+D\+Node} ()
+\item 
+\mbox{\Hypertarget{class_cell_a8d5cfc2553a5171a73d8877294708c79}\label{class_cell_a8d5cfc2553a5171a73d8877294708c79}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries get\+R\+U\+Node} ()
+\item 
+\mbox{\Hypertarget{class_cell_a997b7132163311a0186e77e64d4ad352}\label{class_cell_a997b7132163311a0186e77e64d4ad352}} 
+bool {\bfseries is\+Parent} ()
+\item 
+\mbox{\Hypertarget{class_cell_a246e3de4dabdacf4ff23d447c9a9677d}\label{class_cell_a246e3de4dabdacf4ff23d447c9a9677d}} 
+double {\bfseries get\+Size} ()
+\item 
+\mbox{\Hypertarget{class_cell_a1ada4d42884b213f878308fc2b6131aa}\label{class_cell_a1ada4d42884b213f878308fc2b6131aa}} 
+int {\bfseries get\+Depth} ()
+\item 
+\mbox{\Hypertarget{class_cell_ad0d03024a4284bb96e7e20779962e717}\label{class_cell_ad0d03024a4284bb96e7e20779962e717}} 
+void {\bfseries set\+Depth} (int new\+Depth)
+\item 
+\mbox{\Hypertarget{class_cell_a6c009b00e932e3b3fd89e353a76031a2}\label{class_cell_a6c009b00e932e3b3fd89e353a76031a2}} 
+void {\bfseries set\+ID} (int new\+ID)
+\item 
+\mbox{\Hypertarget{class_cell_ae3066ad38512a970e4104acbbe1688ba}\label{class_cell_ae3066ad38512a970e4104acbbe1688ba}} 
+void {\bfseries set\+L\+U\+Node} (\mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{class_cell_a74164a568f69ad1136510803c3b1cceb}\label{class_cell_a74164a568f69ad1136510803c3b1cceb}} 
+void {\bfseries set\+L\+D\+Node} (\mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{class_cell_aa37fad1a75b57852b3736864a0e34b73}\label{class_cell_aa37fad1a75b57852b3736864a0e34b73}} 
+void {\bfseries set\+R\+D\+Node} (\mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{class_cell_a0d7562b5df4e08fbe3623a625ea5481a}\label{class_cell_a0d7562b5df4e08fbe3623a625ea5481a}} 
+void {\bfseries set\+R\+U\+Node} (\mbox{\hyperlink{class_node}{Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{class_cell_a243bced6771cb3e0d6bce19eb9475273}\label{class_cell_a243bced6771cb3e0d6bce19eb9475273}} 
+void {\bfseries set\+Size} (double size)
+\item 
+\mbox{\Hypertarget{class_cell_a8a1587675b6fd20833a462975635531b}\label{class_cell_a8a1587675b6fd20833a462975635531b}} 
+void {\bfseries dot\+Point} (double x, double y, int layer, int depth)
+\item 
+\mbox{\Hypertarget{class_cell_a930a4ccf1ee9f6168c6b72bb0c3a5e8d}\label{class_cell_a930a4ccf1ee9f6168c6b72bb0c3a5e8d}} 
+void {\bfseries print\+Cell} ()
+\item 
+\mbox{\Hypertarget{class_cell_ae7f45a60cd77538d87eed0e744fe5ba5}\label{class_cell_ae7f45a60cd77538d87eed0e744fe5ba5}} 
+void {\bfseries confirm\+All} ()
+\item 
+\mbox{\Hypertarget{class_cell_a7d4f2fbd71ebcb4dcc7fb180f708feca}\label{class_cell_a7d4f2fbd71ebcb4dcc7fb180f708feca}} 
+bool {\bfseries check\+Node} (\mbox{\hyperlink{class_node}{Node}} $\ast$n)
+\item 
+\mbox{\Hypertarget{class_cell_a202766ab562858d935c3e93441f44946}\label{class_cell_a202766ab562858d935c3e93441f44946}} 
+bool {\bfseries check\+Face} (\mbox{\hyperlink{class_face}{Face}} $\ast$f)
+\item 
+\mbox{\Hypertarget{class_cell_acea6f5aa1c1460bec528eadb8e815dc4}\label{class_cell_acea6f5aa1c1460bec528eadb8e815dc4}} 
+void {\bfseries split\+Cell} (int layer, int depth)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_cell_a57af94cbca5bdbc2ff487869710dcb72}\label{class_cell_a57af94cbca5bdbc2ff487869710dcb72}} 
+\mbox{\hyperlink{class_face}{Face}} $\ast$ {\bfseries L\+Face}
+\item 
+\mbox{\Hypertarget{class_cell_ac181af467d6ff8be802fddc790724326}\label{class_cell_ac181af467d6ff8be802fddc790724326}} 
+\mbox{\hyperlink{class_face}{Face}} $\ast$ {\bfseries D\+Face}
+\item 
+\mbox{\Hypertarget{class_cell_a74b48e21789b7b22a836050641fea086}\label{class_cell_a74b48e21789b7b22a836050641fea086}} 
+\mbox{\hyperlink{class_face}{Face}} $\ast$ {\bfseries R\+Face}
+\item 
+\mbox{\Hypertarget{class_cell_a34ca899f2e78a1bf70391994e25998f2}\label{class_cell_a34ca899f2e78a1bf70391994e25998f2}} 
+\mbox{\hyperlink{class_face}{Face}} $\ast$ {\bfseries U\+Face}
+\item 
+\mbox{\Hypertarget{class_cell_a4d46d817e0a032e31445386a7f12b337}\label{class_cell_a4d46d817e0a032e31445386a7f12b337}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries L\+U\+Node}
+\item 
+\mbox{\Hypertarget{class_cell_a047cfaca7d9627bc1c7706e4fefc04d0}\label{class_cell_a047cfaca7d9627bc1c7706e4fefc04d0}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries L\+D\+Node}
+\item 
+\mbox{\Hypertarget{class_cell_a2910d7bbf2103d1b407ec86a5cc2ed98}\label{class_cell_a2910d7bbf2103d1b407ec86a5cc2ed98}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries R\+D\+Node}
+\item 
+\mbox{\Hypertarget{class_cell_aa9c5e95545f5348af7729dd41ac51508}\label{class_cell_aa9c5e95545f5348af7729dd41ac51508}} 
+\mbox{\hyperlink{class_node}{Node}} $\ast$ {\bfseries R\+U\+Node}
+\item 
+\mbox{\Hypertarget{class_cell_a29b05a12e2b0d06be7a55a3af5f56cdd}\label{class_cell_a29b05a12e2b0d06be7a55a3af5f56cdd}} 
+\mbox{\hyperlink{class_cell_shape}{Cell\+Shape}} $\ast$ {\bfseries L\+U\+Cell}
+\item 
+\mbox{\Hypertarget{class_cell_a02b7a6a1c1d3eb07b7c2fde2de78fd9d}\label{class_cell_a02b7a6a1c1d3eb07b7c2fde2de78fd9d}} 
+\mbox{\hyperlink{class_cell_shape}{Cell\+Shape}} $\ast$ {\bfseries L\+D\+Cell}
+\item 
+\mbox{\Hypertarget{class_cell_aa628aa67dee53f7c28f14e449de7cc0b}\label{class_cell_aa628aa67dee53f7c28f14e449de7cc0b}} 
+\mbox{\hyperlink{class_cell_shape}{Cell\+Shape}} $\ast$ {\bfseries R\+D\+Cell}
+\item 
+\mbox{\Hypertarget{class_cell_ab8053be4d10149d77707d89a7bcce2b8}\label{class_cell_ab8053be4d10149d77707d89a7bcce2b8}} 
+\mbox{\hyperlink{class_cell_shape}{Cell\+Shape}} $\ast$ {\bfseries R\+U\+Cell}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Airfoile/\+Airfoile/main.\+cpp\end{DoxyCompactItemize}
