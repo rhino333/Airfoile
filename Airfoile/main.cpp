@@ -70,7 +70,7 @@ vector<Node*> nodeVector;
 vector<Cell*> cellVector;
 vector<Face*> faceVector;
 vector<Face*> wallVector; //0208
-vector<fi>wall; //< <삼각형인지 사각형인지 , 도형의 id > < snode, enode> >
+vector<fi>wall; // < <삼각형인지 사각형인지 , 도형의 id > < snode, enode> >
 
 
 Rectangle *initRectangle;
