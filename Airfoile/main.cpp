@@ -108,7 +108,8 @@ public:
      */
 public:
     Node() {
-        x = -99999, y = -99999;
+        x = -99999;
+        y = -99999;
         id = ++nodeCount;
         inout = 5; // 재 : 초기화 2017_02_13
     }
@@ -1493,6 +1494,18 @@ int findn(double point, double size, int SorL) {//진
     return n;
 }
 
+/**
+ * @brief
+ * @details 
+ * @param x0 i 번째 airfoile 데이터의 x좌표
+ * @param y0 i 번째 airfoile 데이터의 y좌표
+ * @param x1 i+1 번째 airfoile 데이터의 x좌표
+ * @param y1 i+1 번째 airfoile 데이터의 y좌표
+ * @param size mincellsize?? 추가 정보 필요
+ * @param updown 현재 좌표쌍이 Airfoile상에서 위, 아래 구분. 0 : 위, 1 : 아래
+ *
+ * @bug input2.txt로 실행시 mininode의 간격이 최소 cell 사이즈보다 커서 cell을 찾기 못하는 문제가 있음.
+ */
 void findminnode(double x0, double y0, double x1, double y1, double size, int updown) {//진_01_22 수정                                                        // input2.txt로 실행시 mininode의 간격이 최소 cell사이즈보다 커서 findmininodeCell에서 cell을 찾지 못하는 문제가 있음.
     double gradient = (y1 - y0) / (x1 - x0);
     double sx, lx, sy, ly;
@@ -1508,7 +1521,6 @@ void findminnode(double x0, double y0, double x1, double y1, double size, int up
     else {
         for (int i = findn(sx, size, 0); i <= findn(lx, size, 1); i++) {
             mininode[updown].push_back(make_pair(i*size, gradient* (i*size - x0) + y0));
-            
         }
         for (int i = findn(sy, size, 0); i <= findn(ly, size, 1); i++) {
             double x = (i*size - y0) / gradient + x0;
@@ -3494,7 +3506,7 @@ int main() {
     bool y_increase;
     
     // 입력파일 읽어서 airpoile에 저장
-    if ((inputfp = fopen("input2.txt", "r")) == NULL) {
+    if ((inputfp = fopen("/Users/rhino/Documents/Airfoile/Airfoile/input2.txt", "r")) == NULL) {
         cout << "input file을 찾을수 없습니다 " << endl;
         return 0;
         
@@ -3508,7 +3520,7 @@ int main() {
     //초기화
     initRectangle = new Rectangle(LeftDownX, LeftDownY, initRCellsize, Xcount, Ycount);//진_initcellsize설정
     initCellMaxID = initRectangle->initCell[initRectangle->widthCount - 1][initRectangle->heightCount - 1].getID();
-    mincellsize = initRectangle->initCellSize / pow((double)2, (double)depth); // 재 : 잠정 중지 2017_02_20
+    mincellsize = initRectangle->initCellSize / (double)pow(2, depth); // 재 : 잠정 중지 2017_02_20
     
     //splitcell
     //initRectangle->splitCell(-2, -2, 3, 3, 1, 2, depth);
@@ -3516,13 +3528,14 @@ int main() {
     // mininode 찾기
     int ud = 0;
     
-    double length_prev = 0;
+//    double length_prev = 0;
     int index = 0;
     for (int i = 0; i < n - 1; i++) {
         if (i == uppern - 1) {
             index = 0;
             ud = 1;
         }
+        
         findminnode(airpoile[i].first, airpoile[i].second, airpoile[i + 1].first, airpoile[i + 1].second, mincellsize, ud);
         inputLine.push_back(make_pair(airpoile[i], airpoile[i + 1]));
         
